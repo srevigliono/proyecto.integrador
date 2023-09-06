@@ -169,3 +169,12 @@ main p{
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
 }
+
+.slider{
+    margin: 0;
+    padding: 0 4%;
+    position: relative;
+    touch-action: pan-y;
+    display: flex;
+    justify-content: space-around;
+}
