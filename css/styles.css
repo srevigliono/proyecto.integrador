@@ -52,3 +52,13 @@ main{
     background-color: antiquewhite;
     border-radius: 15px 15px 15px 15px;
 }
+
+.contenedor_index{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.peliculas_populares{
+
+}
