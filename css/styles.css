@@ -38,7 +38,7 @@ h2{
     margin-left: 30%;
     margin-right: 30%;
     padding: 10px;
-    border-radius: 20%;
+    border-radius: 20px 20px 20px 20px;
   
     
     
@@ -127,5 +127,6 @@ footer ul{
     transform: scale(1.2);
     transition: transform 1.5s;
 }
+
 
 
