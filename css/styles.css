@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin:0;
+
 }
 
 header img{
@@ -123,9 +125,81 @@ footer ul{
     
 }
 
-.section_html  :hover{
+.section_html article:hover{
     transform: scale(1.2);
     transition: transform 1.5s;
 }
 
 
+.detail{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+}
+
+.detail article {
+    padding: 20px;
+}
+
+.detail h6,h5{
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 20px;
+    display: flex;
+
+}
+
+.trailer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-right: 5px ;
+}
+
+.info-trailer{
+    background-color: #2c2d42;
+    padding: 10px;
+    border-radius: 15px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    
+
+}
+
+
+.parrafo-trailer {
+    display: block;
+    background-color: #2c2d42;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.detail h4{
+    background-color: #2c2d42;
+    border-radius: 15px;
+    margin-top: 15px;
+    font-family:'Poppins', sans-serif;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    color: rgb(236, 220, 104);
+}
+
+.detail img{
+    width: 500px;
+    
+}
+.video {
+    border-radius: 5%;
+}
+
+.detail p{
+    text-align: justify;
+}

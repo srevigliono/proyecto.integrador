@@ -1,75 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&family=Work+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header>
 
         <div class="logo">
             <img src="./Imagenes/Captura de Pantalla 2023-09-06 a la(s) 10.56.55.png" alt="logo">
         </div>
-    
-         <nav class="barra">
+
+        <nav class="barra">
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./genres.html">Géneros</a></li>
                 <li><a href="./favorite.html">Favoritos</a></li>
                 <li><a href="./detail-movie.html">Películas</a></li>
             </ul>
-         </nav>
-      <!-- Usar target blank para las url del nav de arriba o que se abran en la misma pestaña?-->
-    
+        </nav>
+        <!-- Usar target blank para las url del nav de arriba o que se abran en la misma pestaña?-->
+
         <form action="search-results.html" method="get" class="buscador">
             <label for="busqueda">Ingresar busqueda</label>
             <input type="text" id="busqueda" name="q" required>
             <button type="submit">Buscar</button>
         </form>
-        
+
     </header>
     <main class="contenedor_html">
-        <h2>SERIES POPULARES</h2>
 
-        <section class="section_html">
-            
+        <section class="detail">
             <article>
-                <img src="./Imagenes/house_of_cards_netflix.jpg" alt="House of Cards">
-                <h4>House of Cards</h4>
-                <p>Fecha de estreno: 2018  </p>
+                <img src="./Imagenes/stranger-things-portada.webp" alt="Portada stranger things">
+            </article>
+
+            <article>
+
+                <h2>Stranger Things</h2>
+
+                <div class="trailer">
+
+                    <div class="info-trailer">
+
+                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> FECHA DE ESTRENO:</span>2016
+                        </h5>
+
+                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> GÉNERO:</span> Ciencia
+                            ficción</h5>
+
+                        <div>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/x7Yq9MJUqjY?si=2zZo9agVTBjZ3iil"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen class="video"></iframe>
+                </div>
+
+                <div class="parrafo-trailer">
+                    <p> "Stranger Things" es una serie de ciencia ficción ambientada en los años 80, donde la
+                        desaparición de un niño desencadena eventos paranormales en el pueblo de Hawkins, Indiana. Un
+                        grupo de amigos se embarca en una búsqueda para encontrarlo, enfrentando criaturas aterradoras y
+                        un laboratorio gubernamental oscuro. La serie combina nostalgia, amistad y terror sobrenatural
+                        mientras los personajes luchan por sobrevivir y descubrir los secretos de su comunidad.</p>
+                </div>
+
+
+                <h4>AGREGAR A FAVORITOS </h4>
+
 
             </article>
-            <article>
-                <img src="./Imagenes/XJGRV4RDXZKBNBWMHNHPAH3GRI.jpg" alt="Stranger Things">
-                <h4>Stranger Things</h4>
-                <p>Fecha de estreno: 2016  </p>
-
-            </article>
-            <article>
-                <img src="./Imagenes/portada-breaking-bad.jpeg" alt="Breaking Bad">
-                <h4>Breaking Bad</h4>
-                <p>Fecha de estreno: 2008  </p>
-
-            </article>
-            <article>
-                <img src="./Imagenes/blacklist.png" alt="Blacklist">
-                <h4>Blacklist</h4>
-                <p>Fecha de estreno: 2012  </p>
-
-            </article>
-            <article>
-                <img src="./Imagenes/ozark.jpeg" alt="Ozark">
-                <h4>Ozark</h4>
-                <p>Fecha de estreno: 2017  </p>
-
-            </article>
-  
         </section>
     </main>
     <footer>
@@ -78,8 +97,8 @@
             <li>Bautista Juarez</li>
             <li>Santiago Revigliono</li>
         </ul>
-    
+
     </footer>
 </body>
-</html>
 
+</html>
