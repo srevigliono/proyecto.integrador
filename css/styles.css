@@ -24,6 +24,7 @@ main{
     justify-content: space-around;
     background-color: #1c1c28;
     border-radius: 15px;
+    max-height: 1500px;
     
 }
 
@@ -40,10 +41,7 @@ h2{
     margin-left: 30%;
     margin-right: 30%;
     padding: 10px;
-    border-radius: 20px;
-  
-    
-    
+    border-radius: 20px;   
 }
 
 h4{
@@ -51,6 +49,7 @@ h4{
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
 }
+
 
 p{
     font-family: 'Poppins', sans-serif;
@@ -221,7 +220,37 @@ footer ul{
 }
 
 .section-genres article{
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     margin: 5px;
+    text-align: center;
+
 }
+
+.accion h2 {
+    display: flex;
+    background-image: url(../Imagenes/pelicula-accion.jpeg) ;
+    border-radius: 25px;
+    width: 50%;
+    height: 8vw;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    align-items:center;
+    font-size: 40px;
+}
+
+.familia h2{ 
+    display: flex;
+    background-image: url(../Imagenes/peliculas-familia.jpeg) ;
+    border-radius: 25px;
+    width: 50%;
+    height: 8vw;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    align-items:center;
+    font-size: 40px;  
+}
+
+
