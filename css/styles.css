@@ -24,7 +24,6 @@ main{
     justify-content: space-around;
     background-color: #1c1c28;
     border-radius: 15px;
-    max-height: 400vh;
 
     
 }
@@ -140,7 +139,7 @@ footer ul{
     text-decoration: none;
     color: white;
     padding: 5px;
-    height: 30vh;
+    height: 25%;
 }
 
 .section_html p{
