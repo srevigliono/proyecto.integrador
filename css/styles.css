@@ -24,7 +24,8 @@ main{
     justify-content: space-around;
     background-color: #1c1c28;
     border-radius: 15px;
-    max-height: 1500px;
+    max-height: 400vh;
+
     
 }
 
@@ -43,19 +44,22 @@ h2{
     padding: 10px;
     border-radius: 20px;   
     margin-top: 15px;
+  
 }
 
 h4{
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Poppins', sans-serif;
+    padding-bottom: 10px;
+    
 }
 
 
 p{
     font-family: 'Poppins', sans-serif;
     margin-left: 10px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .barra a{
@@ -113,6 +117,8 @@ footer ul{
     margin-top: 10px;
     padding: 10px;
     flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -121,7 +127,7 @@ footer ul{
     border-radius: 2%;
     width: 100%;
     height: 150px;
-    padding: 5px;
+    padding: 0;
     
 }
 
@@ -134,9 +140,14 @@ footer ul{
     text-decoration: none;
     color: white;
     padding: 5px;
-    
-
+    height: 30vh;
 }
+
+.section_html p{
+    font-size: 13px;
+    color: rgba(237, 225, 225, 0.8);
+}
+
 
 .section_html a:hover{
     transform: scale(1.2);
@@ -235,7 +246,7 @@ footer ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
     margin: 5px;
     text-align: center;
 
@@ -243,7 +254,8 @@ footer ul{
 
 .accion h2 {
     display: flex;
-    background-image: url(../Imagenes/pelicula-accion.jpeg) ;
+    background-image: url(../Imagenes/genres-accion.jpeg);
+    background-size: cover;
     border-radius: 25px;
     width: 50%;
     height: 8vw;
@@ -251,18 +263,53 @@ footer ul{
     color: rgb(0, 0, 0);
     align-items:center;
     font-size: 40px;
+    height: 16vh;
+
 }
 
 .familia h2{ 
     display: flex;
-    background-image: url(../Imagenes/peliculas-familia.jpeg) ;
+    background-image: url(../Imagenes/genres-familia.jpg) ;
+    background-size: cover;
     border-radius: 25px;
     width: 50%;
     height: 8vw;
     justify-content: center;
     color: rgb(0, 0, 0);
     align-items:center;
-    font-size: 40px;  
+    font-size: 40px;
+    height: 16vh;
 }
+
+.ranking h2{ 
+    display: flex;
+    background-image: url(../Imagenes/trofeos.png) ;
+    background-size: contain;
+    background-color:rgb(113, 113, 195);
+    border-radius: 25px;
+    width: 50%;
+    height: 8vw;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    align-items:center;
+    font-size: 40px;
+    height: 16vh;
+}
+
+.maratonear h2{ 
+    display: flex;
+    background-image: url(../Imagenes/genres-maratonear.png) ;
+    background-size: cover;
+    background-color:rgb(113, 113, 195);
+    border-radius: 25px;
+    width: 50%;
+    height: 8vw;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    align-items:center;
+    font-size: 40px;
+    height: 16vh;
+}
+
 
 
