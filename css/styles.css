@@ -260,7 +260,7 @@ footer{
     padding: 20px;
     margin: 5px;
     text-align: center;
-
+    
 }
 
 .accion h2 {
@@ -323,5 +323,50 @@ footer{
 }
 
 
+@media(max-width:420px){
 
+    header{
+        flex-direction: column;
+        align-items: center;
+        
+    }
 
+    .barra{
+        width: 100%;
+
+    }
+
+    .barra ul{
+       
+        padding: 0;
+    }
+
+    .buscador{
+        margin-top: 5px;
+
+    }
+
+    .section_html img {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .section_html{
+
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .section_html a{
+        width: 200px;
+
+    }
+
+    footer ul li{
+
+        margin-top: 5px;
+
+    }
+}
