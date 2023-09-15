@@ -256,6 +256,7 @@ footer{
     flex-wrap: wrap;
     width: 100%;
     height: 90%;
+
 }
 
 
@@ -269,20 +270,25 @@ footer{
     text-align: center;
     flex-wrap: nowrap;
      width: 90%;
+     text-decoration: none;
 }
+
+
 
 .accion h2 {
     display: flex;
     background-image: url(../Imagenes/genres-accion.jpeg);
     background-size: cover;
     border-radius: 25px;
-    width: 35%;
+    width: 100%;
     height: 8vw;
     justify-content: center;
     color: rgb(0, 0, 0);
-    align-items:center;
+    align-items: center;
     font-size: 30px;
-    height: 16vh;
+    text-align: center;
+    margin: unset;
+    padding: 20px;
 
 }
 
@@ -291,13 +297,15 @@ footer{
     background-image: url(../Imagenes/genres-familia.jpg) ;
     background-size: cover;
     border-radius: 25px;
-    width: 35%;
+    width: 100%;
     height: 8vw;
     justify-content: center;
     color: rgb(0, 0, 0);
     align-items:center;
     font-size: 30px;
-    height: 16vh;
+    margin: unset;
+    padding: 20px;
+
 }
 
 .ranking h2{ 
@@ -306,13 +314,15 @@ footer{
     background-size: contain;
     background-color:rgb(113, 113, 195);
     border-radius: 25px;
-    width: 35%;
+    width: 100%;
     height: 8vw;
     justify-content: center;
     color: rgb(0, 0, 0);
     align-items:center;
     font-size: 30px;
-    height: 16vh;
+    margin: unset;
+    padding: 20px;
+
 }
 
 .maratonear h2{ 
@@ -321,13 +331,14 @@ footer{
     background-size: cover;
     background-color:rgb(113, 113, 195);
     border-radius: 25px;
-    width: 35%;
+    width: 100%;
     height: 8vw;
     justify-content: center;
     color: rgb(0, 0, 0);
     align-items:center;
     font-size: 30px;
-    height: 16vh;
+    margin: unset;
+    padding: 20px;
 }
 
 .section-genres a:hover{
@@ -380,5 +391,21 @@ footer{
 
         margin-top: 5px;
 
+    }
+
+    .accion h2{
+        height: fit-content;
+    }
+
+    .familia h2{
+        height: fit-content;
+    }
+
+    .ranking h2{
+        height: fit-content;
+    }
+
+    .maratonear h2{
+        height: fit-content;
     }
 }
