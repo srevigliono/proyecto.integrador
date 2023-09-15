@@ -247,20 +247,28 @@ footer{
     margin-top: 0;
 }
 
-.section-genres{
+.section-genres  {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 90%;
 }
 
 
-.section-genres article{
+.section-genres a {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     margin: 5px;
+    flex-direction: row;
     text-align: center;
-    
+    flex-wrap: nowrap;
+     width: 90%;
 }
 
 .accion h2 {
@@ -268,12 +276,12 @@ footer{
     background-image: url(../Imagenes/genres-accion.jpeg);
     background-size: cover;
     border-radius: 25px;
-    width: 50%;
+    width: 35%;
     height: 8vw;
     justify-content: center;
     color: rgb(0, 0, 0);
     align-items:center;
-    font-size: 40px;
+    font-size: 30px;
     height: 16vh;
 
 }
@@ -283,12 +291,12 @@ footer{
     background-image: url(../Imagenes/genres-familia.jpg) ;
     background-size: cover;
     border-radius: 25px;
-    width: 50%;
+    width: 35%;
     height: 8vw;
     justify-content: center;
     color: rgb(0, 0, 0);
     align-items:center;
-    font-size: 40px;
+    font-size: 30px;
     height: 16vh;
 }
 
@@ -298,12 +306,12 @@ footer{
     background-size: contain;
     background-color:rgb(113, 113, 195);
     border-radius: 25px;
-    width: 50%;
+    width: 35%;
     height: 8vw;
     justify-content: center;
     color: rgb(0, 0, 0);
     align-items:center;
-    font-size: 40px;
+    font-size: 30px;
     height: 16vh;
 }
 
@@ -313,15 +321,19 @@ footer{
     background-size: cover;
     background-color:rgb(113, 113, 195);
     border-radius: 25px;
-    width: 50%;
+    width: 35%;
     height: 8vw;
     justify-content: center;
     color: rgb(0, 0, 0);
     align-items:center;
-    font-size: 40px;
+    font-size: 30px;
     height: 16vh;
 }
 
+.section-genres a:hover{
+    transform: scale(1.2);
+    transition: transform 1.5s;
+}
 
 @media(max-width:420px){
 
