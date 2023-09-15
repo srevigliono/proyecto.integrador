@@ -247,7 +247,7 @@ footer{
     margin-top: 0;
 }
 
-.section-genres  {
+.section-genres{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -259,7 +259,7 @@ footer{
 }
 
 
-.section-genres a {
+.section-genres a{
     display: flex;
     align-items: center;
     justify-content: center;
