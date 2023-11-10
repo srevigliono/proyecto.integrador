@@ -99,6 +99,7 @@ footer ul{
     font-family: 'Poppins', sans-serif;
     color: white;
     margin-top: 15px;
+    width: 75%;
 }
 
 footer ul li{
@@ -106,9 +107,28 @@ footer ul li{
 }
 
 footer{
+    display: flex;
     border-radius: 15px;
     background-color: #2c2d42;
     height: 60px;
+    justify-content: space-around;
+    
+}
+
+.movieData{
+    display: flex;
+    width: 25%;
+}
+
+.movieData img{
+    border-radius: 10%;
+    width: 180px;
+    text-align: left;
+    display: flex;
+    margin-left: 25px;
+    width: 25%;
+
+
 }
 
 .contenedor_html {
