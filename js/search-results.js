@@ -9,17 +9,29 @@ let informacionformulario = querystringobj.get("formulario")
 
 console.log(informacionformulario)
 
-fetch("https://api.themoviedb.org/3/search/movie?api_key=8ba8bbe7dfab5ab5da50fbbbaf3e12a2")
+let url = `https://api.themoviedb.org/3/tv/airing_today?api_key=8ba8bbe7dfab5ab5da50fbbbaf3e12a2&$query=${informacionformulario}`
+
+
+fetch(url)
 
 .then(function(response) {
     return response.json()
     })
 
 .then(function(data) {
+    console.log(data)
     contenido = data.results
     console.log(contenido)
-    document.querySelector("#search-results").innerHTML = "";
-  
+
+    let series = ""
+
+    for (let i = 0 ; i < contenido.lenght ; i++) {
+
+
+    }
+
+
+
    })
 
 .catch(function(error) {
