@@ -19,7 +19,7 @@ fetch(url)
 
 .then(function(data) {
     console.log(data)
-    let movies = data.results
+    let movies = data.results;
     console.log(movies)
 
 
@@ -27,19 +27,30 @@ fetch(url)
     let i = 0;
     let searchResults = document.querySelector("#searchresults");
     for (let i = 0; i < movies.length; i++) {
+    
         contenido += `<a href="./detail-movie.html${movies[i].id}">
             <article>
                 <img src="https://image.tmdb.org/t/p/w500/${movies[i].poster_path}" alt="Movie Poster">
                 <h4>${movies[i].title}</h4>
                 <p>${movies[i].release_date} | ${movies[i].vote_average}</p>
             </article>
-        </a>`;
+        </a>`
     }
-    if (i==0) {
-            contenido = `<h3>¡No hay resultados para tu busqueda!</h3>`
-        }
 
-  
+     for (let i = 0; i < movies.length; i++) {
+    
+        contenido += `<a href="./detail-movie.html${movies[i].id}">
+            <article>
+                <img src="https://image.tmdb.org/t/p/w500/${movies[i].poster_path}" alt="Movie Poster">
+                <h4>${movies[i].title}</h4>
+                <p>${movies[i].release_date} | ${movies[i].vote_average}</p>
+            </article>
+        </a>`
+    }
+    if (movies.length==0) {
+        contenido += `<h3>¡No hay resultados para tu busqueda!</h3>`
+    }
+
     searchResults.innerHTML = contenido;
 
    })
