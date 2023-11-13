@@ -1,16 +1,15 @@
-let formulario = document.querySelector(".buscador")
+let formulario = document.querySelector(".buscador");
 
-let querystring = location.search
-console.log(querystring)
+let querystring = location.search;
+console.log(querystring);
 
-let querystringobj = new URLSearchParams (querystring)
+let querystringobj = new URLSearchParams (querystring);
 
-let informacionformulario = querystringobj.get("formulario")
+let informacionformulario = querystringobj.get("formulario");
 
-console.log(informacionformulario)
+console.log(informacionformulario);
 
-let url = `https://api.themoviedb.org/3/tv/airing_today?api_key=8ba8bbe7dfab5ab5da50fbbbaf3e12a2&$query=${informacionformulario}`
-
+let url = `https://api.themoviedb.org/3/search/movie?api_key=3e70f944e54851d50cccbf55e9b26736&query=${informacionformulario}`;
 
 fetch(url)
 
@@ -20,23 +19,34 @@ fetch(url)
 
 .then(function(data) {
     console.log(data)
-    contenido = data.results
-    console.log(contenido)
-
-    let series = ""
-
-    for (let i = 0 ; i < contenido.lenght ; i++) {
+    let movies = data.results
+    console.log(movies)
 
 
+    let contenido = "";
+    let i = 0;
+    let searchResults = document.querySelector("#searchresults");
+    for (let i = 0; i < movies.length; i++) {
+        contenido += `<a href="./detail-movie.html${movies[i].id}">
+            <article>
+                <img src="https://image.tmdb.org/t/p/w500/${movies[i].poster_path}" alt="Movie Poster">
+                <h4>${movies[i].title}</h4>
+                <p>${movies[i].release_date} | ${movies[i].vote_average}</p>
+            </article>
+        </a>`;
     }
+    if (i==0) {
+            contenido = `<h3>¡No hay resultados para tu busqueda!</h3>`
+        }
 
-
+  
+    searchResults.innerHTML = contenido;
 
    })
 
 .catch(function(error) {
     console.log("Error: " + error);
-    })
+    });
 
 
 
