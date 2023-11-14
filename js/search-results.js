@@ -38,7 +38,13 @@ fetch(url)
     }
 
     searchResults.innerHTML = contenido;
+
   })
   .catch(function(error) {
-    console.log("Error en la solicitud API: " + error);
+    console.log("Error : " + error);
   });
+
+
+let textobusqueda = document.querySelector("#titulobusqueda")
+
+textobusqueda.innerText = `Buscaste acerca de: ${informacionformulario}`

@@ -32,19 +32,15 @@ fetch(url)
         <article>
           <h2>${movies[i].title}</h2>
           
-          <div class="trailer">
-            <div class="info-trailer">
-              <h5><span style="text-decoration: underline; margin-right: 8px;">FECHA DE ESTRENO:</span> ${movies[i].release_date}</h5>
-              <h5><span style="text-decoration: underline; margin-right: 8px;">DURACIÓN:</span>${movies[i].vote_average}</h5>
-              <h5><span style="text-decoration: underline; margin-right: 8px;">IDIOMA:</span>${movies[i].original_language}</h5> 
-            </div>
-          </div>
-          
-          <div class="parrafo-trailer">
-            <p>${movies[i].overview}</p>
+          <div class="info-trailer">
+            <h5><span style="text-decoration: underline; margin-right: 8px;">FECHA DE ESTRENO:</span> ${movies[i].release_date}</h5>
+            <h5><span style="text-decoration: underline; margin-right: 8px;">DURACIÓN:</span>${movies[i].vote_average}</h5>
+            <h5><span style="text-decoration: underline; margin-right: 8px;">IDIOMA:</span>${movies[i].original_language}</h5> 
+            <h5><span style="text-decoration: underline; margin-right: 8px;">RESEÑA:</span>${movies[i].overview}</h5> 
           </div>
           
           <h4 class="boton-agregar-favoritos">AGREGAR A FAVORITOS</h4>
+          
         </article>`;
     }
 
