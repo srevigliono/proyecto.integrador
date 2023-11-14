@@ -298,16 +298,6 @@ footer{
 
 }
 
-.accion article{
-    background-image: url("../Imagenes/genres-accion.jpeg");
-    background-size: cover;
-}
-
-.familia article{
-    background-image: url("../Imagenes/genres-familia.jpg");
-    background-size: cover;
-}
-
 .suspenso article{
     background-image: url("../Imagenes/genres-maratonear.png");
     background-size: cover;
