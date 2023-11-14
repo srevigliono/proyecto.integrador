@@ -23,9 +23,6 @@ fetch(url)
     let contenido = "";
     let searchResults = document.querySelector("#searchresults");
 
-    let texto = document.querySelector("#titulobusqueda");
-    let resultadosbusqueda = texto.innerText = `Resultados de búsqueda para: ${informacionformulario}`;
-
     for (let i = 0; i < movies.length; i++) {
       contenido += `<a href="./detail-movie.html?id=${movies[i].id}">
           <article>
