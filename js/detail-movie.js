@@ -7,7 +7,6 @@ let querystringobj = new URLSearchParams(querystring);
 
 let informacionformulario = querystringobj.get("formulario");
 
-console.log(informacionformulario);
 
 let url = `https://api.themoviedb.org/3/search/movie?api_key=3e70f944e54851d50cccbf55e9b26736&query=${informacionformulario}`;
 
