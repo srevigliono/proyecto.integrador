@@ -15,6 +15,11 @@ fetch(urlPelicula)
 
     let contenido = "";
     let searchResults = document.querySelector("#detail-movie");
+    let generosRecorridos = " ";
+    console.log(pelicula.genres)
+    for (let i = 0; i < pelicula.genres.length; i++) {
+    generosRecorridos += `<li><a href class>${pelicula.genres[i].name}</li>`
+    }
 
     if (pelicula) {
       contenido += `
@@ -33,16 +38,15 @@ fetch(urlPelicula)
 
                         <h5> <span style="text-decoration: underline; margin-right: 8px;"> FECHA DE ESTRENO:</span>${pelicula.release_date} </h5>
                         <h5> <span style="text-decoration: underline; margin-right: 8px;"> DURACIÓN: </span> ${pelicula.runtime} m  </h5>
-                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> GÉNERO:</span> ${pelicula.genres[1][1]}</h5>
-                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> CALIFICACIÓN:</span> ${pelicula.popularity}</h5>
+                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> GÉNERO:</span> </h5>
+                        <ul>
+                         ${generosRecorridos}
+                        </ul>
+                
 
-                        <div>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
+                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> CALIFICACIÓN:</span> ${pelicula.vote_average}</h5>
+
+      
                     </div>
 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/x7Yq9MJUqjY?si=2zZo9agVTBjZ3iil=${pelicula.video}"
@@ -57,6 +61,7 @@ fetch(urlPelicula)
 
 
                 <h4 class="boton-agregar-favoritos">AGREGAR A FAVORITOS </h4>
+                <h4 class="boton-agregar-favoritos">RECOMENDADO0S </h4>
 
 
             </article>`;

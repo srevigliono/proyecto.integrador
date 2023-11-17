@@ -42,7 +42,7 @@ fetch(urlseries)
     let contenido = "";
 
     for (let i = 0; i < 5; i++) {
-      contenido += `<a href="./detail-movie.html?id=${series[i].id}">
+      contenido += `<a href="./detail-serie.html?id=${series[i].id}">
       <article>
           <img src="https://image.tmdb.org/t/p/w500/${series[i].poster_path}" alt="Movie Poster">
           <h4>${series[i].name}</h4>
@@ -88,4 +88,4 @@ fetch(urlpeliculasclasificadas)
     console.log("Error : " + error);
   });
 
-  urlpeliculaspopulares = `https://api.themoviedb.org/3/movie/popular${id}?api_key=3e70f944e54851d50cccbf55e9b26736`
+
