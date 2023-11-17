@@ -299,8 +299,10 @@ footer{
 }
 
 .suspenso article{
-    background-image: url("../Imagenes/genres-maratonear.png");
+    background-color: rgba(128, 128, 128, 0.676);
     background-size: cover;
+    
+    
 }
 
 .section-genres a:hover{
