@@ -16,7 +16,7 @@ fetch(urlSerie)
 
     let contenido = "";
     let searchResults = document.querySelector("#detail-serie");
-    let generosRecorridos;
+    let generosRecorridos = " ";
     for (let i = 0; i < serie.genres.length; i++) {
       generosRecorridos += `<li>${serie.genres[i].name}</li>`
       }
