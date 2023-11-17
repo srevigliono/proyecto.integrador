@@ -88,4 +88,4 @@ fetch(urlpeliculasclasificadas)
     console.log("Error : " + error);
   });
 
-
+  urlpeliculaspopulares = `https://api.themoviedb.org/3/movie/popular${id}?api_key=3e70f944e54851d50cccbf55e9b26736`

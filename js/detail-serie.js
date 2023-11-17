@@ -3,7 +3,8 @@ let querystringobj = new URLSearchParams(querystring);
 let idSerie = querystringobj.get("id");
 
 let APIKey = "3e70f944e54851d50cccbf55e9b26736";
-let urlSerie = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${APIKey}`;
+let urlSerie = `https://api.themoviedb.org/3/tv/${id}?api_key=${APIKey}`
+
 
 fetch(urlSerie)
   .then(function(response) {
@@ -19,21 +20,22 @@ fetch(urlSerie)
     if (serie) {
       contenido += `
       <article>
-                <img src=""https://image.tmdb.org/t/p/w500/${serie.poster_path}">
+      <img src="https://image.tmdb.org/t/p/w500/${serie.poster_path}" alt="Portada stranger things" />
+
             </article>
 
             <article>
 
-                <h2>${serie.name}</h2>
+                <h2>${serie.original_title}</h2>
 
                 <div class="trailer">
 
                     <div class="info-trailer">
 
-                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> FECHA DE ESTRENO:</span>2016 </h5>
-                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> DURACIÓN: </span> 4 TEMPORADAS  </h5>
-                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> GÉNERO:</span> Ciencia
-                            ficción</h5>
+                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> FECHA DE ESTRENO:</span>${serie.release_date} </h5>
+                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> DURACIÓN: </span> ${serie.runtime} m  </h5>
+                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> GÉNERO:</span> ${serie.genres[1][1]}</h5>
+                        <h5> <span style="text-decoration: underline; margin-right: 8px;"> CALIFICACIÓN:</span> ${serie.popularity}</h5>
 
                         <div>
                             <i class="fa-solid fa-star"></i>
@@ -51,11 +53,7 @@ fetch(urlSerie)
                 </div>
 
                 <div class="parrafo-trailer">
-                    <p> "Stranger Things" es una serie de ciencia ficción ambientada en los años 80, donde la
-                        desaparición de un niño desencadena eventos paranormales en el pueblo de Hawkins, Indiana. Un
-                        grupo de amigos se embarca en una búsqueda para encontrarlo, enfrentando criaturas aterradoras y
-                        un laboratorio gubernamental oscuro. La serie combina nostalgia, amistad y terror sobrenatural
-                        mientras los personajes luchan por sobrevivir y descubrir los secretos de su comunidad.=${serie.overview}</p>
+                    <p> ${serie.overview}</p>
                 </div>
 
 

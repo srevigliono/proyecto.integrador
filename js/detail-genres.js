@@ -1,4 +1,7 @@
 
+
+
+/*
 let formulario = document.querySelector(".buscador");
 
 let querystring = location.search;
@@ -41,4 +44,4 @@ fetch(urlpeliculasGeneros)
   .catch(function(error) {
     console.log("Error: " + error);
   });
-
+*/
