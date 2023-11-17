@@ -21,7 +21,6 @@ fetch(urlSerie)
       contenido += `
       <article>
       <img src="https://image.tmdb.org/t/p/w500/${serie.poster_path}" alt="Portada stranger things" />
-
             </article>
 
             <article>
