@@ -6,6 +6,7 @@ let APIKey = "3e70f944e54851d50cccbf55e9b26736";
 let urlSerie = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${APIKey}`
 
 
+
 fetch(urlSerie)
   .then(function(response) {
     return response.json();
@@ -18,8 +19,12 @@ fetch(urlSerie)
     let searchResults = document.querySelector("#detail-serie");
     let generosRecorridos = " ";
     for (let i = 0; i < serie.genres.length; i++) {
-      generosRecorridos += `<li>${serie.genres[i].name}</li>`
-      }
+
+      generosRecorridos += `<li> <a href= "./detail-genres.html?id=${serie.genres[i].id}" style="text-decoration: none; color: inherit;"> <h5>${serie.genres[i].name}</h5> </a > </li>`;
+      
+
+    }
+
 
     if (serie) {
       contenido += `
@@ -56,12 +61,10 @@ fetch(urlSerie)
                 </div>
 
 
-                <h4 class="boton-agregar-favoritos">AGREGAR A FAVORITOS </h4>
-                <h4 class="boton-agregar-favoritos" ">RECOMENDADO0S </h4>
-
+     
+               
             </article>`;
     }
-
 
     searchResults.innerHTML = contenido;
   })
@@ -69,5 +72,40 @@ fetch(urlSerie)
     console.log("Error: " + error);
   });
 
-  let recomendados = document.querySelector("jh")
+  let recomendadosLoaded = false;
 
+  document.querySelector("#recomendados").addEventListener("click", function() {
+    if (!recomendadosLoaded) {
+    
+      urlrecomendados = 'https://api.themoviedb.org/3/movie/top_rated?api_key=2824d7c18fccbca72f06f7f29e7ebcd8';
+  
+
+      fetch(urlrecomendados)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          console.log(data);
+          let recomendados = document.querySelector("#info_recomendados");
+  
+          for (let i = 0; i < 5; i++) {
+            recomendados.innerHTML +=
+              `<a href="./detail-movie.html?id=${data.results[i].id}" class="section_html">
+                <article>
+                  <img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt="Movie Poster">
+                </article>
+              </a>`;
+          }
+  
+          recomendadosLoaded = true;
+        })
+        .catch(function(error) {
+          console.log("Error: " + error);
+        });
+    }
+  
+    let section = document.querySelector("#info_recomendados");
+    section.style.display ="flex";
+  });
+  
+ 

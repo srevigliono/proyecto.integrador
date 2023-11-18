@@ -10,6 +10,7 @@ let botonPeliculas = document.querySelector("#boton_peliculas")
   botonPeliculas.addEventListener( "click" , function () {
 
     fetch(urlgeneropeliculas)
+
     .then(function (response) {
       return response.json();
     })
@@ -40,6 +41,8 @@ let botonPeliculas = document.querySelector("#boton_peliculas")
 
   })
 
+
+
 let urlgeneroseries = `https://api.themoviedb.org/3/genre/tv/list?api_key=3e70f944e54851d50cccbf55e9b26736`;
 
 let botonSeries = document.querySelector("#boton_series")
@@ -47,6 +50,7 @@ let botonSeries = document.querySelector("#boton_series")
   botonSeries.addEventListener( "click" , function () {
 
     fetch(urlgeneroseries)
+    
     .then(function (response) {
       return response.json();
     })

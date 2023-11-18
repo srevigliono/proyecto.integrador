@@ -47,4 +47,4 @@ fetch(url)
 
 let textobusqueda = document.querySelector("#titulobusqueda")
 
-textobusqueda.innerText = `Buscaste acerca de: ${informacionformulario}`
+textobusqueda.innerText = `Resultados de búsqueda para: ${informacionformulario}`

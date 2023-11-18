@@ -17,9 +17,12 @@ fetch(urlPelicula)
     let searchResults = document.querySelector("#detail-movie");
     let generosRecorridos = " ";
     console.log(pelicula.genres)
+
     for (let i = 0; i < pelicula.genres.length; i++) {
 
-    generosRecorridos += `<li> <a href = ""> ${pelicula.genres[i].name} </a > </li>`
+      generosRecorridos += `<li> <a href= "./detail-genres.html?id=${pelicula.genres[i].id}" style="text-decoration: none; color: inherit;"> <h5>${pelicula.genres[i].name}</h5> </a > </li>`;
+
+    
 
     }
 
@@ -62,19 +65,18 @@ fetch(urlPelicula)
                 </div>
 
 
-                <h4 class="boton-agregar-favoritos">AGREGAR A FAVORITOS </h4>
+           
+
 
                 <div>
-                <button id = "recomendados">        
-                    <h4 class="boton-agregar-favoritos">RECOMENDADOS </h4>
-                </button>
-                </div>
-
-
-            </article>`;
+                
+            </article>
+           
+`;
     }
 
     searchResults.innerHTML = contenido;
+
   })
   .catch(function(error) {
     console.log("Error: " + error);
@@ -83,42 +85,42 @@ fetch(urlPelicula)
 
 
 
+  let recomendadosLoaded = false;
 
-
-
+document.querySelector("#recomendados").addEventListener("click", function() {
+  if (!recomendadosLoaded) {
   
-let recomendados = document.querySelector("#recomendados");
+    urlrecomendados = 'https://api.themoviedb.org/3/movie/top_rated?api_key=2824d7c18fccbca72f06f7f29e7ebcd8';
 
-recomendados.addEventListener( "click" , function() {
-
-let APIKey = "3e70f944e54851d50cccbf55e9b26736";
-let urlRecomendados = `https://api.themoviedb.org/3/movie/${idPelicula}/recommendations?api_key=${APIKey}`;
-
-fetch(urlRecomendados)
-.then(function(response){
-	return response.json();
-})
-.then(function(data){
-console.log(data);
-
-let contenido = "";
-
-    for (let i = 0; i < 5; i++) {
-      contenido += `<a href="./detail-movie.html?id=${calificadas[i].id}">
-      <article>
-          <img src="https://image.tmdb.org/t/p/w500/${calificadas[i].poster_path}" alt="Movie Poster">
-          <h4>${calificadas[i].title}</h4>
-          <p>${calificadas[i].release_date} | ${calificadas[i].vote_average}</p>
-      </article>
-    </a>`;
     
-    }
 
 
-})
+    fetch(urlrecomendados)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        console.log(data);
+        let recomendados = document.querySelector("#info_recomendados");
 
-.catch(function(error){
-console.log('El error es: ' + error);
-})
+        for (let i = 0; i < 5; i++) {
+          recomendados.innerHTML +=
+            `<a href="./detail-movie.html?id=${data.results[i].id}" class="section_html">
+              <article>
+                <img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt="Movie Poster">
+              </article>
+            </a>`;
+        }
 
-})
+        recomendadosLoaded = true;
+      })
+      .catch(function(error) {
+        console.log("Error: " + error);
+      });
+  }
+
+  let section = document.querySelector("#info_recomendados");
+  section.style.display ="flex";
+});
+
+//Para hacer lo de la recomendación de películas lo buscamos por nuestra cuenta a algunas cosas ya que no logramos hacerlo con el contenido de la clase. 
